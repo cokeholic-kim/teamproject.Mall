@@ -1,0 +1,588 @@
+:root {
+    /* color */
+    --color-black: #222831;
+    --color-gray: #393E46;
+    --color-white:  #EEEEEE;
+    --color-yellow:  #FFD369;
+  }
+  
+  
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+@font-face {
+    font-family: 'NEXON Lv1 Gothic OTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+li {list-style: none;}
+a {text-decoration: none; color: inherit;}
+body {
+    color: var(--color-black);
+    font-family: 'NEXON Lv1 Gothic OTF';
+    width: 100%;
+    margin: 0 auto;
+}
+/* 상단 부분 */
+#header {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#logo {
+    display: flex;
+}
+#logo i {
+    color: var(--color-yellow);
+    font-size: 18px;
+}
+#logo h1 {
+    letter-spacing: -1px;
+}
+#searcBox {
+    width: 40%;
+    padding: 10px;
+    border: 3px solid var(--color-black);
+    display: flex;
+    justify-content: space-between;
+    transition: 0.5s;
+}
+#searcBox i {
+    padding-left: 8px;
+    border-left: 2px solid var(--color-black);
+}
+#searcBox input {
+    width: 90%;
+    outline: none;
+    border: none;
+}
+#searcBox:hover {
+    border: 3px solid var(--color-yellow);
+}
+#headerList {
+    display: flex;
+}
+#headerList li {
+    padding: 0 10px;
+    font-size: 12px;
+    border-right: 1px solid var(--color-yellow);
+}
+#headerList li:last-child {
+    border-right: none;
+}
+
+/* 메뉴 바 부분 */
+#menuBar {
+    /* width: 100%;
+    height: 50px; */
+    background-color: var(--color-black);
+}
+#menuBar #innerMenu {
+    background-color: var(--color-black);
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-white);
+}
+#menuBar #mainList {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#menuBar #mainList li {
+    text-align: center;
+    width: 25%;
+    height: 50px;
+    line-height: 50px;
+    transition: 0.5s;
+}
+#menuBar #mainList li:hover {
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+#menuBar #mainList li a {
+    width: 100%;
+}
+#menuBar nav i {
+    width: 50px;
+    height: 50px;
+    padding-top: 18px;
+    text-align: center;
+    border-left: 1px solid var(--color-gray);
+    border-right: 1px solid var(--color-gray);
+    transition: 0.5s;
+}
+#menuBar nav i:hover {
+    width: 50px;
+    height: 50px;
+    padding-top: 18px;
+    text-align: center;
+    background-color: var(--color-yellow);
+    color: var(--color-black);
+}
+
+/* 메인 부분 */
+main {
+    width: 100%;
+    min-height: 80vh;
+}
+
+/* 하단 부분 */
+footer {
+    border-top:1px solid #666;
+}
+#footerLine {
+    border-bottom: 1px solid #e8e8e8;
+}
+#bottomLine {
+    border-top: 1px solid #e8e8e8;
+}
+footer #bottomnav{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+footer #bottomnav ul{
+    display: flex;
+}
+footer #bottomnav ul:first-child li{
+    padding: 0 10px;
+    border-right: 1px solid #e8e8e8;
+    text-align: center;
+}
+footer #bottomnav ul:first-child li:nth-child(5){
+    border: none;
+}
+footer #bottomnav ul:nth-child(2) li{
+    padding: 0 5px;
+}
+footer #footermid {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+}
+#footermid .customer{
+    width: 31%;
+    padding-left: 0;
+}
+#footermid .customer p:nth-of-type(1){
+    font-size: 30px;
+    font-weight: bold;
+}
+#footermid .account{
+    width: 18%;
+}
+#footermid .favorite{
+    width: 18%;
+}
+#footermid .return{
+    width: 33%;
+    border: none;
+}
+#footermid div{
+    margin:30px 0 ;
+    padding: 0 20px;
+    border-right:1px solid #e8e8e8;
+}
+#footermid h4{
+    padding: 15px 0;
+}
+#footerbottom {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    font-size: 10px;
+    color: #777;
+}
+#footerbottom ul:nth-child(1),#footerbottom ul:nth-child(2){
+    display: flex;
+    align-items: center;
+}
+#footerbottom ul li{
+    font-weight: bold;
+    padding-right:20px;
+}
+#footerbottom ul li span{
+    font-weight: 300;
+}
+#footermid p{
+    font-size: 11px;
+}
+#footermid ul{
+    font-size: 11px;
+}
+/* innermenu */
+/* 숨겨진 메뉴 부분 */
+#innerMenu {
+    position: relative;
+}
+#hiddenMenu {
+    display: none;
+    width: 80%;
+    height: 300px;
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    z-index: 1;
+    border-bottom: 1px solid #444;
+    border-left: 1px solid #444;
+    border-right: 1px solid #444;
+    background: rgba(255,255,255,0.97);
+    color:  var(--color-black);
+    padding: 20px;
+
+}
+#hiddenList {
+    display: flex;
+    justify-content: space-around;
+}
+#hiddenList > li {
+    width: 20%;
+    height: 50px;
+    text-align: center;
+    font-size: 14px;
+    background-color: #e8e8e8;
+    border-radius: 5px;
+}
+#hiddenList > li a {
+    line-height: 50px;
+}
+/* #hiddenList > li:hover {
+    font-weight: bold;
+} */
+.subList {  
+    width: 100%;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.subList li {
+    text-align: left;
+    width: 100%;
+    height: 40px;
+    padding: 0 20px;
+    color: #666;
+}  
+.subList li a {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+}
+.subList li:hover {
+    background-color: #ccc;
+    color: #fff;
+}
+/* banner */
+#banner{
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+#imglists{
+    position: absolute;
+    top:0;
+    left: 0;
+    transition: 0.5s;
+    width: 400%;
+    display: flex;
+}
+#imglists li{
+    width: 25%;
+}
+#imglists li img{
+    width: 100%;
+}
+.btn {
+    width: 50px;
+    background: rgba(255, 255, 255, 0.5);
+    color: #333;
+    font-size: 26px;
+    line-height: 60px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+div.btn{
+    display: none;
+}
+#banner:hover .btn{
+    display: block;
+}
+
+#nextbtn {
+    transform: translate(1100%, 15%);
+}
+#prevbtn {
+    transform: translate(-1200%, 15%);
+}
+#indi {
+    position:absolute;
+    bottom: 250px;
+    transform: translateY(235px);
+    width: 100%;
+    text-align: center;
+    padding: 10px;  
+}
+#indi span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    margin: 0 3px;
+    font-size: 0;
+  }
+#indi span.on {
+  background-color: var(--color-yellow);
+}
+#indi span:hover {
+    background-color: var(--color-yellow);
+}
+#indi span:first-child {
+    display: none;
+}
+#indi span:last-child {
+    display: none;
+}
+
+/* 추천상품 리스트 */
+#recommend {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 0;
+    height: 540px;
+}
+#recommend h2 {
+    text-align: center;
+    color: #222831;
+    padding-bottom: 40px;
+}
+.recomProduct {
+    display: flex;
+    justify-content: space-evenly;
+}
+.recomProduct .productList {
+    width: 18%;
+}
+.recomProduct .productList img {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.productList span {
+    font-weight: bold;
+    color: #222831;
+    font-size: 14px;
+}
+.product {
+    display: flex;
+    flex-direction: row;
+    height: 280px;
+}
+.product span {
+    font-weight: bold;
+    margin-top: 16px;
+
+}
+
+/* 베스트 5 */
+#best5 {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 0;
+}
+#best5 h2 {
+    text-align: center;
+}
+
+/* 베스트5 메뉴바 */
+
+/* 베스트 5 리스트 */
+#best5Product {
+    display: flex;
+    justify-content: space-evenly;
+}
+.productlists2 {
+    width: 18%;
+}
+.productlists2 img {
+    width: 100%;
+}
+.productlists2 .product2 {
+    width: 18%;
+}
+
+/* 로그인페이지 */
+#loginpage{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+#loginpage h2{
+    font-size: 36px;
+    padding-bottom: 50px;
+}
+#loginpage form{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+#loginpage>form>p>button{
+    background-color: #222831;
+    color: #EEEEEE;
+}
+#swrap{
+    display: flex;
+    align-items: center;
+    height: 60%;
+    width: 100%;
+}
+#swrap button{
+    margin: 0 auto;
+    width: 80%;
+    height: 35%;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: inherit;
+}
+
+#loginpage input{
+    width: 80%;
+    height: 30%;
+    outline: 0;
+    border: 0;
+    border-bottom: #666 solid 1px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+}
+.forgot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    width: 100%;
+    /* padding: 15px 0; */
+}
+.forgot a{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#inputs{
+    /* display: flex; */
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
+    height: 50%;
+}
+.login_join{
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.login_join> button{
+    width: 65%;
+    height: 100%;
+    cursor: pointer;
+}
+.join{
+    text-align: center;
+    height: 70%;
+    padding-top: 5%;
+    width: 70%;
+    margin: 0 auto;
+}
+.join h2{
+    font-size: 36px;
+    text-align: start;
+    padding-left: 15px;
+}
+.join div{
+    height: 70%;
+}
+.join div> form{
+    margin-top: 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.join div form>div{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 16%;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+}
+
+.join div form> div input{
+    border: 1px solid rgba(118, 118, 118,0.5);
+    border-radius: 5px;
+    /* border: none; */
+    margin-left: 15px;
+    height: 50%;
+    width: 20%;
+    /* border-bottom: #222831 1px solid; */
+}
+.join div form div>p{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 15%;
+    margin-left: 15px;
+    height: 100%;
+    border-right:1px solid rgb(118, 118, 118) ;
+    /* border-bottom: #222831 1px solid; */
+}
+.join div form>p{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 20px;
+}
+.join div form>p button{
+    width: 15%;
+    height: 60%;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 0 20px;
+    background-color: #222831;
+    color: #EEEEEE;
+}
